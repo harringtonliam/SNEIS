@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">6787b52e2f97511056c4d7a72799b60a</sp_column>
+        <sp_widget display_value="HTML">8679ef89cb21120000f8d856634c9c4f</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 08:25:37</sys_created_on>
+        <sys_id>0e97f5aa2f97511056c4d7a72799b697</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Take A Break</sys_name>
+        <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+        <sys_update_name>sp_instance_0e97f5aa2f97511056c4d7a72799b697</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-24 08:27:40</sys_updated_on>
+        <title>Take A Break</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"html": {
+		"value": "<p><iframe style=\"width: 960px; height: 600px;\" src=\"https://i.simmer.io/@LiamHarrington/sun-machine\"></iframe></p>",
+		"displayValue": "<p><iframe style=\"width: 960px; height: 600px;\" src=\"https://i.simmer.io/@LiamHarrington/sun-machine\"></iframe></p>"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=0e97f5aa2f97511056c4d7a72799b697"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="EIS">f774752a2f97511056c4d7a72799b6fb</application>
+        <file_path/>
+        <instance_id>4d496e05db09fb042f68c59705961904</instance_id>
+        <instance_name>dev83327</instance_name>
+        <name>sp_instance_0e97f5aa2f97511056c4d7a72799b697</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;6787b52e2f97511056c4d7a72799b60a&lt;/sp_column&gt;&lt;sp_widget display_value="HTML"&gt;8679ef89cb21120000f8d856634c9c4f&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-24 08:25:37&lt;/sys_created_on&gt;&lt;sys_id&gt;0e97f5aa2f97511056c4d7a72799b697&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Take A Break&lt;/sys_name&gt;&lt;sys_package display_value="EIS" source="x_805678_eis"&gt;f774752a2f97511056c4d7a72799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="EIS"&gt;f774752a2f97511056c4d7a72799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_0e97f5aa2f97511056c4d7a72799b697&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-24 08:27:40&lt;/sys_updated_on&gt;&lt;title&gt;Take A Break&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"html": {
+		"value": "&lt;p&gt;&lt;iframe style=\"width: 960px; height: 600px;\" src=\"https://i.simmer.io/@LiamHarrington/sun-machine\"&gt;&lt;/iframe&gt;&lt;/p&gt;",
+		"displayValue": "&lt;p&gt;&lt;iframe style=\"width: 960px; height: 600px;\" src=\"https://i.simmer.io/@LiamHarrington/sun-machine\"&gt;&lt;/iframe&gt;&lt;/p&gt;"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=0e97f5aa2f97511056c4d7a72799b697"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1986181342</payload_hash>
+        <record_name>Take A Break</record_name>
+        <reverted_from/>
+        <source>f774752a2f97511056c4d7a72799b6fd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 08:27:41</sys_created_on>
+        <sys_id>60183dea2f97511056c4d7a72799b642</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184a8bfee0b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-24 08:27:41</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>68183dea679751106ec4fbf9bf6d1941</update_guid>
+        <update_guid_history>68183dea679751106ec4fbf9bf6d1941:-1986181342,de97f5aa9797511018f4a5ed626ad399:-2062584515</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Take A Break">995a82ee2fd7511056c4d7a72799b684</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 09:47:29</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>210e639a726b478988866487f4dee2b9</sys_id>
+        <sys_metadata>0e97f5aa2f97511056c4d7a72799b697</sys_metadata>
+        <sys_name>Take A Break</sys_name>
+        <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+        <sys_scope_delete display_value="">89eb873f9396409e9a431bdd0d5abe49</sys_scope_delete>
+        <sys_update_name>sp_instance_0e97f5aa2f97511056c4d7a72799b697</sys_update_name>
+        <sys_update_version display_value="sp_instance_0e97f5aa2f97511056c4d7a72799b697">60183dea2f97511056c4d7a72799b642</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
