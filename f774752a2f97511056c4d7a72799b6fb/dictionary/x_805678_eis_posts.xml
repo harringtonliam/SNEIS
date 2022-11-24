@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="43053d6a2f97511056c4d7a72799b643" label="Posts" max_length="40" name="x_805678_eis_posts" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="JobTitle" max_length="50" name="jobtitle" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 08:14:34</sys_created_on>
+        <sys_id>58157d6a2f97511056c4d7a72799b61e</sys_id>
+        <sys_name>x_805678_eis_posts.x_805678_eis.eis_manager</sys_name>
+        <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+        <sys_security_acl display_value="x_805678_eis_posts">58157d6a2f97511056c4d7a72799b61b</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_58157d6a2f97511056c4d7a72799b61e</sys_update_name>
+        <sys_user_role display_value="x_805678_eis.eis_manager" name="x_805678_eis.eis_manager">36a4b56a2f97511056c4d7a72799b684</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
