@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_805678_eis_games" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_805678_eis_games" element="NULL" name="x_805678_eis_games" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4ac3762a2f9b511056c4d7a72799b6a3</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-24 12:48:34</sys_created_on>
+            <sys_id>46c3762a2f9b511056c4d7a72799b6a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-11-24 12:48:34</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>title</element>
+            <list_id display_value="x_805678_eis_games" element="NULL" name="x_805678_eis_games" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4ac3762a2f9b511056c4d7a72799b6a3</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-24 12:48:34</sys_created_on>
+            <sys_id>c6c3762a2f9b511056c4d7a72799b6a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-11-24 12:48:34</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>summary</element>
+            <list_id display_value="x_805678_eis_games" element="NULL" name="x_805678_eis_games" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4ac3762a2f9b511056c4d7a72799b6a3</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-24 12:48:34</sys_created_on>
+            <sys_id>4ac3762a2f9b511056c4d7a72799b6a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-11-24 12:48:34</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>description</element>
+            <list_id display_value="x_805678_eis_games" element="NULL" name="x_805678_eis_games" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4ac3762a2f9b511056c4d7a72799b6a3</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-24 12:48:34</sys_created_on>
+            <sys_id>cac3762a2f9b511056c4d7a72799b6a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-11-24 12:48:34</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>logo</element>
+            <list_id display_value="x_805678_eis_games" element="NULL" name="x_805678_eis_games" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4ac3762a2f9b511056c4d7a72799b6a3</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-24 12:48:34</sys_created_on>
+            <sys_id>4ec3762a2f9b511056c4d7a72799b6a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-11-24 12:48:34</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_805678_eis_games" element="NULL" name="x_805678_eis_games" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4ac3762a2f9b511056c4d7a72799b6a3</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-24 12:48:34</sys_created_on>
+            <sys_id>cec3762a2f9b511056c4d7a72799b6a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-11-24 12:48:34</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="x_805678_eis_games" element="NULL" name="x_805678_eis_games" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">4ac3762a2f9b511056c4d7a72799b6a3</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-24 12:48:34</sys_created_on>
+            <sys_id>42c3762a2f9b511056c4d7a72799b6a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-11-24 12:48:34</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_805678_eis_games</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-11-24 12:48:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4ac3762a2f9b511056c4d7a72799b6a3</sys_id>
+            <sys_name>x_805678_eis_games</sys_name>
+            <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+            <sys_update_name>sys_ui_list_x_805678_eis_games_null</sys_update_name>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

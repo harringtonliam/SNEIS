@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	
+		/* Step 3. Accept User Input*/
+	
+	c.sortorder=false;
+	c.changeSortCol=function(key){
+		if(key==c.orderCol)
+			c.sortOrder = !c.sortOrder;
+		else
+			c.sortOrder = false;
+		c.orderCol = key;
+		
+	}
+	
+	c.clickRecord = function(record){
+		alert("clicked");
+	}
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance_table</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>table</field_list>
+        <has_preview>true</has_preview>
+        <id>eis_table_summary</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>EIS Table Summary</name>
+        <option_schema>[{"name":"title","section":"Presentation","label":"Title","type":"string"},{"name":"display_fields","section":"Presentation","label":"Display Fields","type":"field_list"},{"name":"target_page","section":"Behavior","label":"Target Page","type":"string"},{"name":"link_fields","section":"Behavior","label":"Link Fields","type":"field_list"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+
+	/*Step 1. Load initial data from the server *
+	/* populate the 'data' object */
+	/* e.g. data.table = $sp.getValue('table');*/
+
+	if(!input){
+		data.summary = [];
+		data.table = $sp.getParameter('table') || options.table || 'x_805678_eis_games';
+		data.fields =  $sp.getParameter('fields') || options.display_fields || 'title,summary,logo';
+		data.targetpage = $sp.getParameter('targetpage') || options.target_page || 'play_a_game'; 
+	  data.targetpage = $sp.getParameter('linkfields') || options.linkfields || 'title'; 
+
+		data.records = [];
+
+		var tableGR = new GlideRecordSecure(data.table);
+		tableGR.addActiveQuery();
+		tableGR.query();
+
+		data.labels = [];
+		var labels = $sp.getFieldsObject(tableGR, data.fields);
+
+		for(var label in labels) {
+			data.labels.push({
+				"key":label,
+				"type":labels[label].type,
+				"value":labels[label].label
+			});
+
+		}
+
+
+		while(tableGR.next()) {
+			var record = {};
+			$sp.getRecordDisplayValues(record, tableGR, data.fields);
+			$sp.getRecordValues(record,tableGR,'sys_id');
+			data.records.push(record);
+		}
+
+
+	}
+
+	/*Step 4 Process user input*/
+	if(input) {
+
+	}
+
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 13:00:37</sys_created_on>
+        <sys_id>e6863eaa2f9b511056c4d7a72799b619</sys_id>
+        <sys_name>EIS Table Summary</sys_name>
+        <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+        <sys_update_name>sp_widget_e6863eaa2f9b511056c4d7a72799b619</sys_update_name>
+        <template><![CDATA[<form>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{ ::c.options.title}}
+    </div>
+  </div>
+
+  <!-- Step2 display initial data from the server -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th ng-repeat="label in c.data.labels"
+            ng-click="c.changeSortCol(label.key)">{{label.value}}
+          <span ng-show="c.orderCol==label.key">
+            <span class="fa fa-sort-up"
+                  ng-show="!c.sortOrder"></span>
+            <span class="fa fa-sort-down"
+                  ng-show="c.sortOrder"></span>
+          </span>
+        </th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+      <tr ng-repeat="record in c.data.records | orderBy: c.orderCol : c.sortOrder"
+          ng-click="c.clickRecord(record)">
+        <td ng-repeat="label in c.data.labels">{{record[label.key]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Step 5.  display customized content based on user input -->
+</form>]]></template>
+    </sp_widget>
+</record_update>
