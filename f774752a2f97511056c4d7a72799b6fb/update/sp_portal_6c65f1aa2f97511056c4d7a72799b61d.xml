@@ -11,7 +11,7 @@
         <kb_knowledge_page display_value="kb_home">e1c919e4dbd3220099f93691f0b8f535</kb_knowledge_page>
         <login_page display_value="landing">36c61807cb31120000f8d856634c9ca9</login_page>
         <logo/>
-        <notfound_page/>
+        <notfound_page display_value="404">3c2c9063cb11020000f8d856634c9c1f</notfound_page>
         <quick_start_config/>
         <sc_catalog/>
         <sc_catalog_page/>
@@ -19,7 +19,7 @@
         <search_application/>
         <search_results_configuration/>
         <sp_chat_queue/>
-        <sp_rectangle_menu display_value="SP Header Menu">d150fd31cb10020000f8d856634c9ce6</sp_rectangle_menu>
+        <sp_rectangle_menu/>
         <sys_class_name>sp_portal</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-11-24 08:23:36</sys_created_on>
@@ -29,7 +29,7 @@
         <sys_policy/>
         <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
         <sys_update_name>sp_portal_6c65f1aa2f97511056c4d7a72799b61d</sys_update_name>
-        <theme display_value="La Jolla">a7a6e78277002300a6e592718a10617a</theme>
+        <theme display_value="EIS">e52d3a7f2f17111056c4d7a72799b606</theme>
         <title>EIS</title>
         <ts_index_group/>
         <url_suffix>eis</url_suffix>

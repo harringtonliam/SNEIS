@@ -39,6 +39,18 @@
 	"display_fields": {
 		"value": "number,title,summary",
 		"displayValue": "number,title,summary"
+	},
+	"target_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"link_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"hover_color": {
+		"value": "",
+		"displayValue": ""
 	}
 }]]></widget_parameters>
     </sp_instance_table>

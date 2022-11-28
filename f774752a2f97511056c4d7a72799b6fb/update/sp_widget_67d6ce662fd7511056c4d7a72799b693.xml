@@ -13,7 +13,20 @@
 	
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.eis-panel-heading
+{
+  text-align: center;
+  background-color: #4280C0; 
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  
+}
+
+.eis-gameframe
+{
+    text-align: center;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -24,7 +37,7 @@
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>eis_game</name>
-        <option_schema>[{"name":"game_url","section":"other","default_value":"https://i.simmer.io/@LiamHarrington/sun-machine","label":"Game URL","type":"string"},{"name":"iframe_width","section":"other","default_value":"960","label":"iframe width","type":"string"},{"name":"iframe_height","section":"other","default_value":"600","label":"iframe height","type":"string"}]</option_schema>
+        <option_schema>[{"name":"table","section":"Data","default_value":"x_805678_eis_games","label":"Table","type":"string"},{"displayValue":"Games","name":"gamesysid","section":"Data","default_value":"98d3b62a2f9b511056c4d7a72799b6a8","label":"gamesysid","type":"string","value":"x_805678_eis_games"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
@@ -32,16 +45,34 @@
 	/*Step 1. Load initial data from the server *
 	/* populate the 'data' object */
 	/* e.g. data.table = $sp.getValue('table');*/
-	
+
 	if(!input){
-	 data.iframe = "<iframe src='https://i.simmer.io/@LiamHarrington/sun-machine' style='width:960px;height:600px'></iframe>";
+		data.gamesysid = 	$sp.getParameter('gamesysid') || options.game_sys_id || '';
+		data.table = 	$sp.getParameter('table') || options.table ||  'x_805678_eis_games';
+
+		var gameGR = new GlideRecordSecure(data.table);
+		var returnValue= gameGR.get(data.gamesysid);
+
+		if(returnValue)
+		{
+			data.gameurl = gameGR.getDisplayValue('url');
+			data.title =  gameGR.getDisplayValue('title');
+			data.summary =  gameGR.getDisplayValue('summary');
+			data.description =  gameGR.getDisplayValue('description');
+			data.instructions =  gameGR.getDisplayValue('instructions');
+			data.documentation =  gameGR.getDisplayValue('documentation');
+		}
+		else
+		{
+			data.title = 'No Game Found!';
+		}
 	}
-	
+
 	/*Step 4 Process user input*/
 	if(input) {
-		
+
 	}
-	
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -54,14 +85,39 @@
         <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
         <sys_update_name>sp_widget_67d6ce662fd7511056c4d7a72799b693</sys_update_name>
         <template><![CDATA[<form>
-
   <!-- Step2 display initial data from the server -->
+  <div class="panel panel-default">
+    <div class="panel-heading eis-panel-heading">
+      {{ ::c.data.title}}
+    </div>
+  </div>
   <p>
-    <iframe ng-src="{{trustSrc(c.options.game_url)}}" style="width:960px;height:600px"></iframe>
-
-
+    Click on the game window to start.
   </p>
-  <span> Game url {{ ::c.options.game_url }}</span>
+
+  <p class="eis-gameframe">
+    <iframe ng-src="{{trustSrc(c.data.gameurl)}}" style="width:960px;height:600px"></iframe>
+  </p>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#instructions" role="tab" data-toggle="tab">Instructions</a></li>
+    <li><a href="#description" role="tab" data-toggle="tab">Description</a></li>
+    <li><a href="#documentation" role="tab" data-toggle="tab">Documentation</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="instructions">{{ c.data.instructions }}</div>
+    <div class="tab-pane" id="description">
+      <p>
+        {{ c.data.summary }}
+      </p>
+      <p>
+        {{ c.data.description }}
+      </p>
+    </div>
+    <div class="tab-pane" id="documentation">file</div>
+  </div>
+
 
 
   <!-- Step 5.  display customized content based on user input -->

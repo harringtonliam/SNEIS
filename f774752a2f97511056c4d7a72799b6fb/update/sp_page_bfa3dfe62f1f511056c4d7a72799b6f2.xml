@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <css/>
+        <css>section.page main.body {
+ padding-top: 0px !important; 
+}</css>
         <draft>false</draft>
         <dynamic_title_structure/>
         <id>eis_index</id>

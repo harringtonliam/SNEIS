@@ -2,32 +2,32 @@
     <sp_instance_link action="INSERT_OR_UPDATE">
         <active>true</active>
         <class_name/>
-        <color>primary</color>
+        <color>success</color>
         <css/>
-        <glyph>gamepad</glyph>
+        <glyph>line-chart</glyph>
         <id/>
         <kb_article/>
         <kb_category/>
         <kb_topic/>
-        <order>2</order>
+        <order>1</order>
         <roles/>
         <sc_cat_item/>
         <sc_category/>
-        <short_description>Play something</short_description>
+        <short_description/>
         <size>md</size>
-        <sp_column display_value="1">b023832a2fdb511056c4d7a72799b602</sp_column>
-        <sp_page display_value="play_a_game">ed77f5aa2f97511056c4d7a72799b66f</sp_page>
+        <sp_column display_value="2">9af9323b2f17111056c4d7a72799b670</sp_column>
+        <sp_page display_value="index">46cc384147532100ba13a5554ee49009</sp_page>
         <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
         <sys_class_name>sp_instance_link</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-11-24 14:38:38</sys_created_on>
-        <sys_id>defc43ae2fdb511056c4d7a72799b6be</sys_id>
-        <sys_name>Play A Game</sys_name>
+        <sys_created_on>2022-11-28 10:28:09</sys_created_on>
+        <sys_id>880ab6732f17111056c4d7a72799b679</sys_id>
+        <sys_name>Do Some Work</sys_name>
         <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
-        <sys_update_name>sp_instance_link_defc43ae2fdb511056c4d7a72799b6be</sys_update_name>
-        <title>Play A Game</title>
+        <sys_update_name>sp_instance_link_880ab6732f17111056c4d7a72799b679</sys_update_name>
+        <title>Do Some Work</title>
         <type>page</type>
         <url/>
         <widget_parameters><![CDATA[{
@@ -37,5 +37,5 @@
 	}
 }]]></widget_parameters>
     </sp_instance_link>
-    <sys_translated_text action="delete_multiple" query="documentkey=defc43ae2fdb511056c4d7a72799b6be"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=880ab6732f17111056c4d7a72799b679"/>
 </record_update>

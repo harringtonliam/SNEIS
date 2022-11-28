@@ -18,12 +18,31 @@
 	}
 	
 	c.clickRecord = function(record){
-		alert("clicked");
+		location.href="eis?id=play_a_game&gamesysid="+record.sys_id;
 	}
 	
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.eistablerow:hover {
+  background-color: #d3d3d3; 
+}
+
+.eis-panel-heading
+{
+  text-align: center;
+  background-color: #4280C0; 
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  
+}
+
+.eis_table-heading
+{
+    background-color: #4280C0; 
+  color: white;
+  font-weight: bold;
+}</css>
         <data_table>sp_instance_table</data_table>
         <demo_data/>
         <description/>
@@ -34,7 +53,7 @@
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>EIS Table Summary</name>
-        <option_schema>[{"name":"title","section":"Presentation","label":"Title","type":"string"},{"name":"display_fields","section":"Presentation","label":"Display Fields","type":"field_list"},{"name":"target_page","section":"Behavior","label":"Target Page","type":"string"},{"name":"link_fields","section":"Behavior","label":"Link Fields","type":"field_list"}]</option_schema>
+        <option_schema>[{"name":"title","section":"Presentation","label":"Title","type":"string"},{"name":"display_fields","section":"Presentation","label":"Display Fields","type":"field_list"},{"name":"target_page","section":"Behavior","label":"Target Page","type":"string"},{"name":"link_fields","section":"Behavior","label":"Link Fields","type":"field_list"},{"name":"hover_color","section":"Presentation","default_value":"cyan","label":"Hover Color","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
@@ -98,19 +117,23 @@
         <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
         <sys_update_name>sp_widget_e6863eaa2f9b511056c4d7a72799b619</sys_update_name>
         <template><![CDATA[<form>
-  
+
   <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-heading eis-panel-heading">
       {{ ::c.options.title}}
     </div>
   </div>
 
+
   <!-- Step2 display initial data from the server -->
-  <table class="table">
+  <table class="table eis-widgets">
     <thead>
       <tr>
         <th ng-repeat="label in c.data.labels"
-            ng-click="c.changeSortCol(label.key)">{{label.value}}
+            ng-click="c.changeSortCol(label.key)"
+            class="eis_table-heading"
+            >{{label.value}}
+          
           <span ng-show="c.orderCol==label.key">
             <span class="fa fa-sort-up"
                   ng-show="!c.sortOrder"></span>
@@ -124,7 +147,8 @@
 
     <tbody>
       <tr ng-repeat="record in c.data.records | orderBy: c.orderCol : c.sortOrder"
-          ng-click="c.clickRecord(record)">
+          ng-click="c.clickRecord(record)"
+          class="eistablerow">
         <td ng-repeat="label in c.data.labels">{{record[label.key]}}</td>
       </tr>
     </tbody>

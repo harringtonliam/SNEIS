@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>EIS Home - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="eis_index">bfa3dfe62f1f511056c4d7a72799b6f2</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-28 10:58:27</sys_created_on>
+        <sys_id>04f08f732f57111056c4d7a72799b621</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EIS Home - Container 2</sys_name>
+        <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+        <sys_update_name>sp_container_04f08f732f57111056c4d7a72799b621</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-28 10:58:27</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="EIS">f774752a2f97511056c4d7a72799b6fb</application>
+        <file_path/>
+        <instance_id>4d496e05db09fb042f68c59705961904</instance_id>
+        <instance_name>dev83327</instance_name>
+        <name>sp_container_04f08f732f57111056c4d7a72799b621</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>EIS Home - Container 2</name><order>2</order><sp_page display_value="eis_index">bfa3dfe62f1f511056c4d7a72799b6f2</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-11-28 10:58:27</sys_created_on><sys_id>04f08f732f57111056c4d7a72799b621</sys_id><sys_mod_count>0</sys_mod_count><sys_name>EIS Home - Container 2</sys_name><sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package><sys_policy/><sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope><sys_update_name>sp_container_04f08f732f57111056c4d7a72799b621</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-11-28 10:58:27</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1184446796</payload_hash>
+        <record_name>EIS Home - Container 2</record_name>
+        <reverted_from/>
+        <source>c911c2e22fd7511056c4d7a72799b6f4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-28 10:58:27</sys_created_on>
+        <sys_id>8cf08f732f57111056c4d7a72799b622</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184bde366a60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-28 10:58:27</sys_updated_on>
+        <type>Container</type>
+        <update_guid>c4f08f7372571110db8c85de192d7222</update_guid>
+        <update_guid_history>c4f08f7372571110db8c85de192d7222:-1184446796</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="EIS Home - Container 2">8ef047b32f57111056c4d7a72799b6a7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-28 10:58:36</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>26e706d2b4bc4cd885f123f1c65ca040</sys_id>
+        <sys_metadata>04f08f732f57111056c4d7a72799b621</sys_metadata>
+        <sys_name>EIS Home - Container 2</sys_name>
+        <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+        <sys_scope_delete display_value="">89eb873f9396409e9a431bdd0d5abe49</sys_scope_delete>
+        <sys_update_name>sp_container_04f08f732f57111056c4d7a72799b621</sys_update_name>
+        <sys_update_version display_value="sp_container_04f08f732f57111056c4d7a72799b621">8cf08f732f57111056c4d7a72799b622</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
