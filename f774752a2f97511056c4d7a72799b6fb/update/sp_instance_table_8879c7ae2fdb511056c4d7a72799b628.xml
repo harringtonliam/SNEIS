@@ -41,8 +41,8 @@
 		"displayValue": "number,title,summary"
 	},
 	"target_page": {
-		"value": "",
-		"displayValue": ""
+		"value": "play_a_game",
+		"displayValue": "play_a_game"
 	},
 	"link_fields": {
 		"value": "",

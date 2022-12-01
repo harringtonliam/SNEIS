@@ -19,7 +19,7 @@
   background-color: #4280C0; 
   color: white;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.4em;
   
 }
 
@@ -33,12 +33,12 @@
         <docs/>
         <field_list/>
         <has_preview>true</has_preview>
-        <id>eis_game</id>
+        <id>eis_play_game</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>eis_game</name>
+        <name>EIS Play Game</name>
         <option_schema>[{"name":"table","section":"Data","default_value":"x_805678_eis_games","label":"Table","type":"string"},{"displayValue":"Games","name":"gamesysid","section":"Data","default_value":"98d3b62a2f9b511056c4d7a72799b6a8","label":"gamesysid","type":"string","value":"x_805678_eis_games"}]</option_schema>
-        <public>false</public>
+        <public>true</public>
         <roles/>
         <script><![CDATA[(function() {
 
@@ -50,7 +50,7 @@
 		data.gamesysid = 	$sp.getParameter('gamesysid') || options.game_sys_id || '';
 		data.table = 	$sp.getParameter('table') || options.table ||  'x_805678_eis_games';
 
-		var gameGR = new GlideRecordSecure(data.table);
+		var gameGR = new GlideRecord(data.table);
 		var returnValue= gameGR.get(data.gamesysid);
 
 		if(returnValue)
@@ -77,13 +77,13 @@
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2022-11-24 09:32:20</sys_created_on>
-        <sys_id>67d6ce662fd7511056c4d7a72799b693</sys_id>
-        <sys_name>eis_game</sys_name>
+        <sys_created_on>2022-11-28 12:27:04</sys_created_on>
+        <sys_id>0a3557f72f97111056c4d7a72799b660</sys_id>
+        <sys_name>EIS Play Game</sys_name>
         <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
         <sys_policy/>
         <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
-        <sys_update_name>sp_widget_67d6ce662fd7511056c4d7a72799b693</sys_update_name>
+        <sys_update_name>sp_widget_0a3557f72f97111056c4d7a72799b660</sys_update_name>
         <template><![CDATA[<form>
   <!-- Step2 display initial data from the server -->
   <div class="panel panel-default">

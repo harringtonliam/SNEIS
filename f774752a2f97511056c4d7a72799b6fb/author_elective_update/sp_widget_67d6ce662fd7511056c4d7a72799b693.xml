@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope, $sce) {
+  /* widget controller */
+  var c = this;
+	
+	  $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+  }
+	
+	/* Step 3. Accept User Input*/
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.eis-panel-heading
+{
+  text-align: center;
+  background-color: #4280C0; 
+  color: white;
+  font-weight: bold;
+  font-size: 1.4em;
+  
+}
+
+.eis-gameframe
+{
+    text-align: center;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>eis_game</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>eis_game</name>
+        <option_schema>[{"name":"table","section":"Data","default_value":"x_805678_eis_games","label":"Table","type":"string"},{"displayValue":"Games","name":"gamesysid","section":"Data","default_value":"98d3b62a2f9b511056c4d7a72799b6a8","label":"gamesysid","type":"string","value":"x_805678_eis_games"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	/*Step 1. Load initial data from the server *
+	/* populate the 'data' object */
+	/* e.g. data.table = $sp.getValue('table');*/
+
+	if(!input){
+		data.gamesysid = 	$sp.getParameter('gamesysid') || options.game_sys_id || '';
+		data.table = 	$sp.getParameter('table') || options.table ||  'x_805678_eis_games';
+
+		var gameGR = new GlideRecordSecure(data.table);
+		var returnValue= gameGR.get(data.gamesysid);
+
+		if(returnValue)
+		{
+			data.gameurl = gameGR.getDisplayValue('url');
+			data.title =  gameGR.getDisplayValue('title');
+			data.summary =  gameGR.getDisplayValue('summary');
+			data.description =  gameGR.getDisplayValue('description');
+			data.instructions =  gameGR.getDisplayValue('instructions');
+			data.documentation =  gameGR.getDisplayValue('documentation');
+		}
+		else
+		{
+			data.title = 'No Game Found!';
+		}
+	}
+
+	/*Step 4 Process user input*/
+	if(input) {
+
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-24 09:32:20</sys_created_on>
+        <sys_id>67d6ce662fd7511056c4d7a72799b693</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>eis_game</sys_name>
+        <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+        <sys_update_name>sp_widget_67d6ce662fd7511056c4d7a72799b693</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-28 12:22:20</sys_updated_on>
+        <template><![CDATA[<form>
+  <!-- Step2 display initial data from the server -->
+  <div class="panel panel-default">
+    <div class="panel-heading eis-panel-heading">
+      {{ ::c.data.title}}
+    </div>
+  </div>
+  <p>
+    Click on the game window to start.
+  </p>
+
+  <p class="eis-gameframe">
+    <iframe ng-src="{{trustSrc(c.data.gameurl)}}" style="width:960px;height:600px"></iframe>
+  </p>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#instructions" role="tab" data-toggle="tab">Instructions</a></li>
+    <li><a href="#description" role="tab" data-toggle="tab">Description</a></li>
+    <li><a href="#documentation" role="tab" data-toggle="tab">Documentation</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="instructions">{{ c.data.instructions }}</div>
+    <div class="tab-pane" id="description">
+      <p>
+        {{ c.data.summary }}
+      </p>
+      <p>
+        {{ c.data.description }}
+      </p>
+    </div>
+    <div class="tab-pane" id="documentation">file</div>
+  </div>
+
+
+
+  <!-- Step 5.  display customized content based on user input -->
+
+</form>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="EIS">f774752a2f97511056c4d7a72799b6fb</application>
+        <file_path/>
+        <instance_id>4d496e05db09fb042f68c59705961904</instance_id>
+        <instance_name>dev83327</instance_name>
+        <name>sp_widget_67d6ce662fd7511056c4d7a72799b693</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function($scope, $sce) {
+  /* widget controller */
+  var c = this;
+	
+	  $scope.trustSrc = function(src) {
+    return $sce.trustAsResourceUrl(src);
+  }
+	
+	/* Step 3. Accept User Input*/
+	
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.eis-panel-heading
+{
+  text-align: center;
+  background-color: #4280C0; 
+  color: white;
+  font-weight: bold;
+  font-size: 1.4em;
+  
+}
+
+.eis-gameframe
+{
+    text-align: center;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;eis_game&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;eis_game&lt;/name&gt;&lt;option_schema&gt;[{"name":"table","section":"Data","default_value":"x_805678_eis_games","label":"Table","type":"string"},{"displayValue":"Games","name":"gamesysid","section":"Data","default_value":"98d3b62a2f9b511056c4d7a72799b6a8","label":"gamesysid","type":"string","value":"x_805678_eis_games"}]&lt;/option_schema&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+
+	/*Step 1. Load initial data from the server *
+	/* populate the 'data' object */
+	/* e.g. data.table = $sp.getValue('table');*/
+
+	if(!input){
+		data.gamesysid = 	$sp.getParameter('gamesysid') || options.game_sys_id || '';
+		data.table = 	$sp.getParameter('table') || options.table ||  'x_805678_eis_games';
+
+		var gameGR = new GlideRecordSecure(data.table);
+		var returnValue= gameGR.get(data.gamesysid);
+
+		if(returnValue)
+		{
+			data.gameurl = gameGR.getDisplayValue('url');
+			data.title =  gameGR.getDisplayValue('title');
+			data.summary =  gameGR.getDisplayValue('summary');
+			data.description =  gameGR.getDisplayValue('description');
+			data.instructions =  gameGR.getDisplayValue('instructions');
+			data.documentation =  gameGR.getDisplayValue('documentation');
+		}
+		else
+		{
+			data.title = 'No Game Found!';
+		}
+	}
+
+	/*Step 4 Process user input*/
+	if(input) {
+
+	}
+
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-24 09:32:20&lt;/sys_created_on&gt;&lt;sys_id&gt;67d6ce662fd7511056c4d7a72799b693&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;eis_game&lt;/sys_name&gt;&lt;sys_package display_value="EIS" source="x_805678_eis"&gt;f774752a2f97511056c4d7a72799b6fb&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="EIS"&gt;f774752a2f97511056c4d7a72799b6fb&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_67d6ce662fd7511056c4d7a72799b693&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-28 12:22:20&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;form&gt;
+  &lt;!-- Step2 display initial data from the server --&gt;
+  &lt;div class="panel panel-default"&gt;
+    &lt;div class="panel-heading eis-panel-heading"&gt;
+      {{ ::c.data.title}}
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;
+    Click on the game window to start.
+  &lt;/p&gt;
+
+  &lt;p class="eis-gameframe"&gt;
+    &lt;iframe ng-src="{{trustSrc(c.data.gameurl)}}" style="width:960px;height:600px"&gt;&lt;/iframe&gt;
+  &lt;/p&gt;
+  &lt;ul class="nav nav-tabs" role="tablist"&gt;
+    &lt;li class="active"&gt;&lt;a href="#instructions" role="tab" data-toggle="tab"&gt;Instructions&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#description" role="tab" data-toggle="tab"&gt;Description&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#documentation" role="tab" data-toggle="tab"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;!-- Tab panes --&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="instructions"&gt;{{ c.data.instructions }}&lt;/div&gt;
+    &lt;div class="tab-pane" id="description"&gt;
+      &lt;p&gt;
+        {{ c.data.summary }}
+      &lt;/p&gt;
+      &lt;p&gt;
+        {{ c.data.description }}
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="documentation"&gt;file&lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+  &lt;!-- Step 5.  display customized content based on user input --&gt;
+
+&lt;/form&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>398389833</payload_hash>
+        <record_name>eis_game</record_name>
+        <reverted_from/>
+        <source>c911c2e22fd7511056c4d7a72799b6f4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-28 12:22:20</sys_created_on>
+        <sys_id>a4245bb72f97111056c4d7a72799b661</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184be3031610000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-28 12:22:20</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>ec245bb7379711108d064d3a4a353f60</update_guid>
+        <update_guid_history>ec245bb7379711108d064d3a4a353f60:398389833,ef621b37a99711105919e41c1d7f0208:-927039733,aa51db733e9711106b5e286548d4e4a5:-1082631774,63af8b735a971110eafa075da0c8e214:-927039733,0b6f4bbf905711104855db43d456bc7a:-959071187,01ce03ff885711100af0effb87de75f5:-1483173149,04be0b33f397111045f80cec498a4496:-336004497,6297fef7ae171110f2f69cc9f7583274:-54695636,e786fab36817111026db98262d58e669:418127071,c656f273fb1711107506b7bc5a076a0b:872381392,b4833233c317111042ede14c7fd96fb5:-1400737726,a3503633501711105720b3f568d0cc8c:1844006769,5dffe6bf9ad311107afe7852078d8499:-1631115449,179fe6bfd8d31110b686799f4463f895:1908903567,be7f2abf28d3111064eef36cd8e78f6c:829885957,f54fe2bf53d311102987847e595f7086:-567197640,c53fe2bfccd311102b70456830a5d481:-1022135071,ec6ee6bfe1d311108be8fd1692fd7e70:-73589748,dadde6bf09d31110f1df9b98a4fb9ef7:1894196508,54dd267f52d31110ebf591f7ee2ebbb6:773783808,faec6a7f3fd311100d426343672bc170:1321029948,ebdce27f82d3111008ea6469f770e319:1294659515,fdcc267f83d31110a37ca67e97427b5a:1127762496,878cea3f4ed31110cbba1259fc326c15:990065823,201ce63f20d31110287e8e64899795cf:1516480479,d0ebe6fb8ad31110986680cbe0d76c0d:1967751556,97dbeafb09d31110b3cde8ac7661c3f9:152129704,ad2baafbb5d31110c222dd23818c0276:125218729,2a0baafb6ed3111056817184f5b78b71:-731999325,f3ca667b31d31110678430dfa60eb91b:-131536325,40882a3bbfd3111086374000bd5cf857:-2049038274,47686a3b45d31110813160f071c0d0c6:692138658,80682a3bb9d31110339644309d58f052:-1430223166,4a38ae3ba6d31110aced94dc4fcce55f:2043553695,21d72a3bfbd3111057f3fadc57855c0d:-683582972,8687ea77a8d311102e8a38e2cb01bc95:208561864,69572673f5d31110fb5142a1b79df2e5:-1223644999,a7f6aaf73ad31110ad376ea85ef90566:757892071,b596e2f7e9d311100d43df4df383d0da:438357902,8a56e2f366d3111041768ea6ecd980bf:-459125451,1cdc5e2e331b5110fa63168c611fb23c:154369033,3c68d2aa3a1b51102ec31e9a8ef6ea00:-1036185419,ce5892e6641b5110dd73be84b2a44323:873833653,6b48d2aa101b51106c590d95acbb9935:-423429836,b88392e6cd1b5110cd20b02146f07dce:-467018035,74e15626941b5110a01bced6cba01689:1050903574,0ad15666ab1b5110d7f51985d4547ba9:1310221167,c9a15ee2231b5110149bc1ad0201b216:1882731990,65401a26f91b51101bad155b69aea872:517279717,785f86e2221b5110262e0f13298321d0:-273690484,e34e4eee09d75110048a69b8f3a750ea:292161785,371d42ee4dd751101e3b3b752a55b848:-1867062640,6be98a6ea5d75110f90a64e8e4bd352d:-67022695,25b90eea0ad75110b9065c081cc318ce:1667924058,32598e2e23d75110879b688ef48780e0:636869769,5d59866ecdd75110db62ad35e3b4369b:-513596476,2fd6ce6624d751106ea0e1821aaf7d96:611571138</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="eis_game">c6ee2fc42fe7511056c4d7a72799b6d2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-29 08:57:47</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>02a3183c3daa4c8c962a7c3f5cfb5884</sys_id>
+        <sys_metadata>67d6ce662fd7511056c4d7a72799b693</sys_metadata>
+        <sys_name>eis_game</sys_name>
+        <sys_package display_value="EIS" source="x_805678_eis">f774752a2f97511056c4d7a72799b6fb</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="EIS">f774752a2f97511056c4d7a72799b6fb</sys_scope>
+        <sys_scope_delete display_value="">89eb873f9396409e9a431bdd0d5abe49</sys_scope_delete>
+        <sys_update_name>sp_widget_67d6ce662fd7511056c4d7a72799b693</sys_update_name>
+        <sys_update_version display_value="sp_widget_67d6ce662fd7511056c4d7a72799b693">a4245bb72f97111056c4d7a72799b661</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

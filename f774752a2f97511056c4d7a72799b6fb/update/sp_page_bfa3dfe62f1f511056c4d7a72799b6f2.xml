@@ -9,7 +9,7 @@
         <id>eis_index</id>
         <internal>false</internal>
         <omit_watcher>false</omit_watcher>
-        <public>false</public>
+        <public>true</public>
         <roles/>
         <seo_script/>
         <short_description/>

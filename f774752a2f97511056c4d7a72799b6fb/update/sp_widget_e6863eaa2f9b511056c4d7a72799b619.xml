@@ -18,7 +18,7 @@
 	}
 	
 	c.clickRecord = function(record){
-		location.href="eis?id=play_a_game&gamesysid="+record.sys_id;
+		location.href="eis?id=" + c.options.target_page + "&gamesysid="+record.sys_id;
 	}
 	
 };]]></client_script>
@@ -53,9 +53,9 @@
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
         <name>EIS Table Summary</name>
-        <option_schema>[{"name":"title","section":"Presentation","label":"Title","type":"string"},{"name":"display_fields","section":"Presentation","label":"Display Fields","type":"field_list"},{"name":"target_page","section":"Behavior","label":"Target Page","type":"string"},{"name":"link_fields","section":"Behavior","label":"Link Fields","type":"field_list"},{"name":"hover_color","section":"Presentation","default_value":"cyan","label":"Hover Color","type":"string"}]</option_schema>
-        <public>false</public>
-        <roles/>
+        <option_schema>[{"name":"title","section":"Presentation","label":"Title","type":"string"},{"name":"display_fields","section":"Presentation","label":"Display Fields","type":"field_list"},{"name":"target_page","section":"Behavior","label":"Target Page","type":"string"}]</option_schema>
+        <public>true</public>
+        <roles>sn_ext_usr_reg.sn_external_user</roles>
         <script><![CDATA[(function() {
 
 
@@ -68,11 +68,10 @@
 		data.table = $sp.getParameter('table') || options.table || 'x_805678_eis_games';
 		data.fields =  $sp.getParameter('fields') || options.display_fields || 'title,summary,logo';
 		data.targetpage = $sp.getParameter('targetpage') || options.target_page || 'play_a_game'; 
-	  data.targetpage = $sp.getParameter('linkfields') || options.linkfields || 'title'; 
 
 		data.records = [];
 
-		var tableGR = new GlideRecordSecure(data.table);
+		var tableGR = new GlideRecord(data.table);
 		tableGR.addActiveQuery();
 		tableGR.query();
 
