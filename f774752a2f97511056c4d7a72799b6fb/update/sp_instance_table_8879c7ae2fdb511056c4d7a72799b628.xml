@@ -10,7 +10,7 @@
         <glyph/>
         <id/>
         <maximum_entries>5</maximum_entries>
-        <order>1</order>
+        <order>2</order>
         <order_by/>
         <order_direction>asc</order_direction>
         <roles/>
@@ -37,8 +37,8 @@
 		"displayValue": "Select a Game to Play"
 	},
 	"display_fields": {
-		"value": "number,title,summary",
-		"displayValue": "number,title,summary"
+		"value": "title,summary",
+		"displayValue": "title,summary"
 	},
 	"target_page": {
 		"value": "play_a_game",
