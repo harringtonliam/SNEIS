@@ -128,9 +128,7 @@
     <h1 class="eis-heading">
       {{ c.data.title }}
     </h1>
-    <p class="eis-gameframe">
-      <img src="{{ c.data.logo }}" alt="Game screen shot" width="300" height="200">
-    </p>
+
     <div class="panel panel-default">
       <div class="eis-gamelinkpanel">
         <a href="{{ c.data.gamepageurl }}" class="eis.gamelink"> Play {{ c.data.title }} </a>
